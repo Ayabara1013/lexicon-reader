@@ -373,7 +373,7 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen>
                       text: 'Compact',
                       glowColor: SynthwaveColors.neonPink,
                       onPressed: () => notifier.applyPreset(
-                        const ReadingPreferences.compact(),
+                        ReadingPreferences.compact,
                       ),
                     ),
                   ),
@@ -383,7 +383,7 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen>
                       text: 'Comfortable',
                       glowColor: SynthwaveColors.neonCyan,
                       onPressed: () => notifier.applyPreset(
-                        const ReadingPreferences.comfortable(),
+                        ReadingPreferences.comfortable,
                       ),
                     ),
                   ),
@@ -393,7 +393,7 @@ class _ReaderScreenState extends ConsumerState<ReaderScreen>
                       text: 'Relaxed',
                       glowColor: SynthwaveColors.electricPurple,
                       onPressed: () => notifier.applyPreset(
-                        const ReadingPreferences.relaxed(),
+                        ReadingPreferences.relaxed,
                       ),
                     ),
                   ),
