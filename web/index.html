@@ -91,16 +91,12 @@
 
   <script>
     window.addEventListener('load', function(ev) {
-      // Download main.dart.js
-      _flutter.loader.loadEntrypoint({
-        serviceWorker: {
-          serviceWorkerVersion: serviceWorkerVersion,
-        },
-        onEntrypointLoaded: function(engineInitializer) {
-          engineInitializer.initializeEngine().then(function(appRunner) {
-            document.body.classList.add('flutter-ready');
-            appRunner.runApp();
-          });
+      // Use the newer Flutter web initialization API
+      _flutter.loader.load({
+        onEntrypointLoaded: async function(engineInitializer) {
+          const appRunner = await engineInitializer.initializeEngine();
+          document.body.classList.add('flutter-ready');
+          await appRunner.runApp();
         }
       });
     });
